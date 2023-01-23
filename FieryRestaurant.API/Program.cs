@@ -2,6 +2,7 @@ using FieryRestaurant.Business.Mapping;
 using FieryRestaurant.Business.Mapping.Implimentation;
 using FieryRestaurant.Business.Mapping.Interface;
 using FieryRestaurant.Repository.DataAccess;
+using FieryRestaurant.Repository.Logger;
 using FieryRestaurant.Repository.Repository.Implimentation;
 using FieryRestaurant.Repository.Repository.Interface;
 using FieryRestaurant.Service;
@@ -28,13 +29,14 @@ namespace FieryRestaurant.API
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers().AddNewtonsoftJson();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<FieryDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("FieryDbConnection")));
             builder.Services.AddOData();
             builder.Services.AddAutoMapper(typeof(FieryMapperProfile).Assembly);
+            builder.Services.AddScoped<ILoggerManager, LoggerManager>();
             builder.Services.AddScoped<IFieryService, FieryService>();
             builder.Services.AddScoped<IFieryRepository, FieryRepository>();
             builder.Services.AddScoped<IFieryMapping, FieryMapping>();

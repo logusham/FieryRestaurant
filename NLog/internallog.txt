@@ -1,0 +1,299 @@
+2023-01-23 17:20:34.5195 Info Message Template Auto Format enabled
+2023-01-23 17:20:34.5571 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2023-01-23 17:20:34.6293 Debug Setting 'NLog.Targets.FileTarget.Name' to 'logfile'
+2023-01-23 17:20:34.6293 Debug Setting 'NLog.Targets.FileTarget.FileName' to 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt'
+2023-01-23 17:20:34.6428 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:20:34.6428 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-01-23 17:20:34.6428 Debug Setting 'NLog.Targets.FileTarget.Layout' to '${longdate} ${level:uppercase=true} ${message}'
+2023-01-23 17:20:34.6428 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:20:34.6428 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-01-23 17:20:34.6428 Debug Setting 'NLog.LayoutRenderers.LevelLayoutRenderer.Uppercase' to 'true'
+2023-01-23 17:20:34.6547 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:20:34.6547 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-01-23 17:20:34.6547 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:20:34.6547 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-01-23 17:20:34.6547 Debug Adding target NLog.Targets.FileTarget(Name=logfile)
+2023-01-23 17:20:34.6547 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-01-23 17:20:34.6547 Trace ParseRulesElement
+2023-01-23 17:20:34.6791 Debug Watching file-filter 'NLog.config' in directory: C:\Users\Gokul\source\repos\FieryRestaurant\FieryRestaurant.API
+2023-01-23 17:20:34.6791 Debug --- NLog configuration dump ---
+2023-01-23 17:20:34.6791 Debug Targets:
+2023-01-23 17:20:34.6791 Debug FileTarget(Name=logfile)
+2023-01-23 17:20:34.6791 Debug Rules:
+2023-01-23 17:20:34.6860 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-01-23 17:20:34.6860 Debug logNamePattern: (FieryRestaurent_Service.Controllers.SuppliersController:Equals) levels: [ Fatal ] writeTo: [ logfile ]
+2023-01-23 17:20:34.6860 Debug logNamePattern: (FieryRestaurent.ServiceLayer.SupplierServiceImpl:Equals) levels: [ Warn Error Fatal ] writeTo: [ logfile ]
+2023-01-23 17:20:34.6860 Debug logNamePattern: (FieryRestaurent.Dal.RepositoryImpl.SupplierRepositoryImpl:Equals) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-01-23 17:20:34.6860 Debug --- End of NLog configuration dump ---
+2023-01-23 17:20:34.6860 Trace FindReachableObject<System.Object>:
+2023-01-23 17:20:34.6860 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-01-23 17:20:34.6860 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-01-23 17:20:34.6860 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-01-23 17:20:34.6860 Trace   Scanning Property FileName 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt' NLog.Layouts
+2023-01-23 17:20:34.6860 Trace   Scanning SimpleLayout 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt'
+2023-01-23 17:20:34.7014 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-01-23 17:20:34.7014 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:20:34.7014 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-01-23 17:20:34.7014 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:20:34.7014 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-01-23 17:20:34.7014 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-01-23 17:20:34.7014 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-01-23 17:20:34.7014 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-01-23 17:20:34.7014 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:20:34.7014 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-01-23 17:20:34.7014 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:20:34.7014 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-01-23 17:20:34.7014 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2023-01-23 17:20:34.7014 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-01-23 17:20:34.7014 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-01-23 17:20:34.7014 Trace Scanning LoggingRule 'logNamePattern: (FieryRestaurent_Service.Controllers.SuppliersController:Equals) levels: [ Fatal ] writeTo: [ logfile ]'
+2023-01-23 17:20:34.7014 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-01-23 17:20:34.7014 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-01-23 17:20:34.7014 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-01-23 17:20:34.7014 Trace Scanning LoggingRule 'logNamePattern: (FieryRestaurent.ServiceLayer.SupplierServiceImpl:Equals) levels: [ Warn Error Fatal ] writeTo: [ logfile ]'
+2023-01-23 17:20:34.7014 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-01-23 17:20:34.7014 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-01-23 17:20:34.7014 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-01-23 17:20:34.7014 Trace Scanning LoggingRule 'logNamePattern: (FieryRestaurent.Dal.RepositoryImpl.SupplierRepositoryImpl:Equals) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-01-23 17:20:34.7014 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-01-23 17:20:34.7014 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-01-23 17:20:34.7014 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-01-23 17:20:34.7014 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=C:\Users\Gokul\source\repos\FieryRestaurant\FieryRestaurant.API\NLog.config
+2023-01-23 17:20:34.7173 Debug Unused target checking is started... Rule Count: 4, Target Count: 1
+2023-01-23 17:20:34.7173 Debug Unused target checking is completed. Total Rule Count: 4, Total Target Count: 1, Unused Target Count: 0
+2023-01-23 17:20:34.7173 Trace Initializing Layout Renderer: ${message}
+2023-01-23 17:20:34.7173 Trace Initializing Layout Renderer: ${literal}
+2023-01-23 17:20:34.7173 Trace Initializing Layout Renderer: ${level}
+2023-01-23 17:20:34.7173 Trace Initializing Layout Renderer: ${literal}
+2023-01-23 17:20:34.7173 Trace Initializing Layout Renderer: ${longdate}
+2023-01-23 17:20:34.7173 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2023-01-23 17:20:34.7173 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:20:34.7173 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-01-23 17:20:34.7173 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-01-23 17:20:34.7173 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-01-23 17:20:34.7173 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:20:34.7173 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-01-23 17:20:34.7173 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:20:34.7173 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-01-23 17:20:34.7341 Trace Initializing Layout Renderer: ${literal}
+2023-01-23 17:20:34.7341 Trace Initializing Layout Renderer: ${shortdate}
+2023-01-23 17:20:34.7341 Trace Initializing Layout Renderer: ${literal}
+2023-01-23 17:20:34.7341 Trace Initializing C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt
+2023-01-23 17:20:34.7341 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:20:34.7341 Trace Scanning SimpleLayout 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt'
+2023-01-23 17:20:34.7341 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-01-23 17:20:34.7341 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:20:34.7341 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-01-23 17:20:34.7341 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:20:34.7341 Trace Initializing FileTarget(Name=logfile)
+2023-01-23 17:20:34.7341 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-01-23 17:20:34.7341 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-01-23 17:20:34.7341 Trace  Scanning Property FileName 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt' NLog.Layouts
+2023-01-23 17:20:34.7341 Trace  Scanning SimpleLayout 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt'
+2023-01-23 17:20:34.7341 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-01-23 17:20:34.7341 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-01-23 17:20:34.7341 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2023-01-23 17:20:34.7341 Trace FileTarget(Name=logfile) has 2 layouts
+2023-01-23 17:20:34.7341 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2023-01-23 17:22:50.2823 Info Message Template Auto Format enabled
+2023-01-23 17:22:50.3237 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2023-01-23 17:22:50.4054 Debug Setting 'NLog.Targets.FileTarget.Name' to 'logfile'
+2023-01-23 17:22:50.4054 Debug Setting 'NLog.Targets.FileTarget.FileName' to 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt'
+2023-01-23 17:22:50.4293 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:22:50.4293 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-01-23 17:22:50.4362 Debug Setting 'NLog.Targets.FileTarget.Layout' to '${longdate} ${level:uppercase=true} ${message}'
+2023-01-23 17:22:50.4362 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:22:50.4362 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-01-23 17:22:50.4362 Debug Setting 'NLog.LayoutRenderers.LevelLayoutRenderer.Uppercase' to 'true'
+2023-01-23 17:22:50.4362 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:22:50.4362 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-01-23 17:22:50.4362 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:22:50.4362 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-01-23 17:22:50.4362 Debug Adding target NLog.Targets.FileTarget(Name=logfile)
+2023-01-23 17:22:50.4362 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-01-23 17:22:50.4362 Trace ParseRulesElement
+2023-01-23 17:22:50.4655 Debug Watching file-filter 'NLog.config' in directory: C:\Users\Gokul\source\repos\FieryRestaurant\FieryRestaurant.API
+2023-01-23 17:22:50.4676 Debug --- NLog configuration dump ---
+2023-01-23 17:22:50.4676 Debug Targets:
+2023-01-23 17:22:50.4676 Debug FileTarget(Name=logfile)
+2023-01-23 17:22:50.4676 Debug Rules:
+2023-01-23 17:22:50.4676 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-01-23 17:22:50.4676 Debug logNamePattern: (FieryRestaurent_Service.Controllers.SuppliersController:Equals) levels: [ Fatal ] writeTo: [ logfile ]
+2023-01-23 17:22:50.4676 Debug logNamePattern: (FieryRestaurent.ServiceLayer.SupplierServiceImpl:Equals) levels: [ Warn Error Fatal ] writeTo: [ logfile ]
+2023-01-23 17:22:50.4676 Debug logNamePattern: (FieryRestaurent.Dal.RepositoryImpl.SupplierRepositoryImpl:Equals) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-01-23 17:22:50.4676 Debug --- End of NLog configuration dump ---
+2023-01-23 17:22:50.4827 Trace FindReachableObject<System.Object>:
+2023-01-23 17:22:50.4827 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-01-23 17:22:50.4827 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-01-23 17:22:50.4827 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-01-23 17:22:50.4827 Trace   Scanning Property FileName 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt' NLog.Layouts
+2023-01-23 17:22:50.4827 Trace   Scanning SimpleLayout 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt'
+2023-01-23 17:22:50.4827 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-01-23 17:22:50.4827 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:22:50.4827 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-01-23 17:22:50.4827 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:22:50.4827 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-01-23 17:22:50.4827 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-01-23 17:22:50.4827 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-01-23 17:22:50.4827 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-01-23 17:22:50.4827 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:22:50.4827 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-01-23 17:22:50.4827 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:22:50.4827 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-01-23 17:22:50.4827 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2023-01-23 17:22:50.4827 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-01-23 17:22:50.4827 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-01-23 17:22:50.4827 Trace Scanning LoggingRule 'logNamePattern: (FieryRestaurent_Service.Controllers.SuppliersController:Equals) levels: [ Fatal ] writeTo: [ logfile ]'
+2023-01-23 17:22:50.4827 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-01-23 17:22:50.4827 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-01-23 17:22:50.4984 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-01-23 17:22:50.4984 Trace Scanning LoggingRule 'logNamePattern: (FieryRestaurent.ServiceLayer.SupplierServiceImpl:Equals) levels: [ Warn Error Fatal ] writeTo: [ logfile ]'
+2023-01-23 17:22:50.4984 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-01-23 17:22:50.4984 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-01-23 17:22:50.4984 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-01-23 17:22:50.4984 Trace Scanning LoggingRule 'logNamePattern: (FieryRestaurent.Dal.RepositoryImpl.SupplierRepositoryImpl:Equals) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-01-23 17:22:50.4984 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-01-23 17:22:50.4984 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-01-23 17:22:50.4984 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-01-23 17:22:50.4984 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=C:\Users\Gokul\source\repos\FieryRestaurant\FieryRestaurant.API\NLog.config
+2023-01-23 17:22:50.4984 Debug Unused target checking is started... Rule Count: 4, Target Count: 1
+2023-01-23 17:22:50.4984 Debug Unused target checking is completed. Total Rule Count: 4, Total Target Count: 1, Unused Target Count: 0
+2023-01-23 17:22:50.4984 Trace Initializing Layout Renderer: ${message}
+2023-01-23 17:22:50.4984 Trace Initializing Layout Renderer: ${literal}
+2023-01-23 17:22:50.4984 Trace Initializing Layout Renderer: ${level}
+2023-01-23 17:22:50.4984 Trace Initializing Layout Renderer: ${literal}
+2023-01-23 17:22:50.4984 Trace Initializing Layout Renderer: ${longdate}
+2023-01-23 17:22:50.4984 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2023-01-23 17:22:50.5146 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:22:50.5146 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-01-23 17:22:50.5146 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-01-23 17:22:50.5146 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-01-23 17:22:50.5146 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:22:50.5146 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-01-23 17:22:50.5146 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:22:50.5146 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-01-23 17:22:50.5146 Trace Initializing Layout Renderer: ${literal}
+2023-01-23 17:22:50.5146 Trace Initializing Layout Renderer: ${shortdate}
+2023-01-23 17:22:50.5146 Trace Initializing Layout Renderer: ${literal}
+2023-01-23 17:22:50.5146 Trace Initializing C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt
+2023-01-23 17:22:50.5146 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:22:50.5146 Trace Scanning SimpleLayout 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt'
+2023-01-23 17:22:50.5146 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-01-23 17:22:50.5146 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:22:50.5146 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-01-23 17:22:50.5146 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:22:50.5146 Trace Initializing FileTarget(Name=logfile)
+2023-01-23 17:22:50.5146 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-01-23 17:22:50.5146 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-01-23 17:22:50.5146 Trace  Scanning Property FileName 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt' NLog.Layouts
+2023-01-23 17:22:50.5146 Trace  Scanning SimpleLayout 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt'
+2023-01-23 17:22:50.5146 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-01-23 17:22:50.5146 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-01-23 17:22:50.5146 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2023-01-23 17:22:50.5146 Trace FileTarget(Name=logfile) has 2 layouts
+2023-01-23 17:22:50.5146 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2023-01-23 17:42:58.6818 Info Message Template Auto Format enabled
+2023-01-23 17:42:58.7141 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2023-01-23 17:42:58.8676 Debug Setting 'NLog.Targets.FileTarget.Name' to 'logfile'
+2023-01-23 17:42:58.8676 Debug Setting 'NLog.Targets.FileTarget.FileName' to 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt'
+2023-01-23 17:42:58.8810 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:42:58.8810 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-01-23 17:42:58.8810 Debug Setting 'NLog.Targets.FileTarget.Layout' to '${longdate} ${level:uppercase=true} ${message}'
+2023-01-23 17:42:58.8892 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:42:58.8892 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-01-23 17:42:58.8892 Debug Setting 'NLog.LayoutRenderers.LevelLayoutRenderer.Uppercase' to 'true'
+2023-01-23 17:42:58.8892 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:42:58.8892 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-01-23 17:42:58.8892 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:42:58.8892 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-01-23 17:42:58.8892 Debug Adding target NLog.Targets.FileTarget(Name=logfile)
+2023-01-23 17:42:58.8892 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2023-01-23 17:42:58.8892 Trace ParseRulesElement
+2023-01-23 17:42:58.9269 Debug Watching file-filter 'NLog.config' in directory: C:\Users\Gokul\source\repos\FieryRestaurant\FieryRestaurant.API
+2023-01-23 17:42:58.9269 Debug --- NLog configuration dump ---
+2023-01-23 17:42:58.9269 Debug Targets:
+2023-01-23 17:42:58.9269 Debug FileTarget(Name=logfile)
+2023-01-23 17:42:58.9269 Debug Rules:
+2023-01-23 17:42:58.9367 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-01-23 17:42:58.9367 Debug logNamePattern: (FieryRestaurent_Service.Controllers.SuppliersController:Equals) levels: [ Fatal ] writeTo: [ logfile ]
+2023-01-23 17:42:58.9367 Debug logNamePattern: (FieryRestaurent.ServiceLayer.SupplierServiceImpl:Equals) levels: [ Warn Error Fatal ] writeTo: [ logfile ]
+2023-01-23 17:42:58.9367 Debug logNamePattern: (FieryRestaurent.Dal.RepositoryImpl.SupplierRepositoryImpl:Equals) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2023-01-23 17:42:58.9367 Debug --- End of NLog configuration dump ---
+2023-01-23 17:42:58.9367 Trace FindReachableObject<System.Object>:
+2023-01-23 17:42:58.9367 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-01-23 17:42:58.9367 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-01-23 17:42:58.9367 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-01-23 17:42:58.9521 Trace   Scanning Property FileName 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt' NLog.Layouts
+2023-01-23 17:42:58.9521 Trace   Scanning SimpleLayout 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt'
+2023-01-23 17:42:58.9521 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-01-23 17:42:58.9521 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:42:58.9521 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-01-23 17:42:58.9521 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:42:58.9521 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-01-23 17:42:58.9521 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-01-23 17:42:58.9521 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-01-23 17:42:58.9521 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-01-23 17:42:58.9521 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:42:58.9521 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-01-23 17:42:58.9521 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:42:58.9521 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-01-23 17:42:58.9521 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2023-01-23 17:42:58.9521 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-01-23 17:42:58.9521 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-01-23 17:42:58.9521 Trace Scanning LoggingRule 'logNamePattern: (FieryRestaurent_Service.Controllers.SuppliersController:Equals) levels: [ Fatal ] writeTo: [ logfile ]'
+2023-01-23 17:42:58.9521 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-01-23 17:42:58.9521 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-01-23 17:42:58.9521 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-01-23 17:42:58.9521 Trace Scanning LoggingRule 'logNamePattern: (FieryRestaurent.ServiceLayer.SupplierServiceImpl:Equals) levels: [ Warn Error Fatal ] writeTo: [ logfile ]'
+2023-01-23 17:42:58.9521 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-01-23 17:42:58.9521 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-01-23 17:42:58.9521 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-01-23 17:42:58.9521 Trace Scanning LoggingRule 'logNamePattern: (FieryRestaurent.Dal.RepositoryImpl.SupplierRepositoryImpl:Equals) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2023-01-23 17:42:58.9521 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2023-01-23 17:42:58.9521 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2023-01-23 17:42:58.9521 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2023-01-23 17:42:58.9680 Info Validating config: TargetNames=logfile, ConfigItems=15, FilePath=C:\Users\Gokul\source\repos\FieryRestaurant\FieryRestaurant.API\NLog.config
+2023-01-23 17:42:58.9680 Debug Unused target checking is started... Rule Count: 4, Target Count: 1
+2023-01-23 17:42:58.9680 Debug Unused target checking is completed. Total Rule Count: 4, Total Target Count: 1, Unused Target Count: 0
+2023-01-23 17:42:58.9680 Trace Initializing Layout Renderer: ${message}
+2023-01-23 17:42:58.9680 Trace Initializing Layout Renderer: ${literal}
+2023-01-23 17:42:58.9680 Trace Initializing Layout Renderer: ${level}
+2023-01-23 17:42:58.9680 Trace Initializing Layout Renderer: ${literal}
+2023-01-23 17:42:58.9680 Trace Initializing Layout Renderer: ${longdate}
+2023-01-23 17:42:58.9680 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2023-01-23 17:42:58.9864 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:42:58.9864 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-01-23 17:42:58.9864 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-01-23 17:42:58.9864 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2023-01-23 17:42:58.9864 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:42:58.9864 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2023-01-23 17:42:58.9864 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:42:58.9864 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2023-01-23 17:42:58.9864 Trace Initializing Layout Renderer: ${literal}
+2023-01-23 17:42:58.9864 Trace Initializing Layout Renderer: ${shortdate}
+2023-01-23 17:42:58.9864 Trace Initializing Layout Renderer: ${literal}
+2023-01-23 17:42:58.9864 Trace Initializing C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt
+2023-01-23 17:42:58.9864 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2023-01-23 17:42:58.9864 Trace Scanning SimpleLayout 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt'
+2023-01-23 17:42:58.9864 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2023-01-23 17:42:58.9864 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:42:58.9864 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2023-01-23 17:42:58.9864 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2023-01-23 17:42:58.9864 Trace Initializing FileTarget(Name=logfile)
+2023-01-23 17:42:58.9864 Trace FindReachableObject<NLog.Layouts.Layout>:
+2023-01-23 17:42:58.9986 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2023-01-23 17:42:58.9986 Trace  Scanning Property FileName 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt' NLog.Layouts
+2023-01-23 17:42:58.9986 Trace  Scanning SimpleLayout 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\${shortdate}_logfile.txt'
+2023-01-23 17:42:58.9986 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2023-01-23 17:42:58.9986 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2023-01-23 17:42:58.9986 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2023-01-23 17:42:58.9986 Trace FileTarget(Name=logfile) has 2 layouts
+2023-01-23 17:42:58.9986 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2023-01-23 17:43:06.2641 Debug Targets configured when LogLevel >= Info for Logger: FieryRestaurant.Repository.Logger.LoggerManager
+2023-01-23 17:43:06.2641 Debug Logger FieryRestaurant.Repository.Logger.LoggerManager [Info] => logfile
+2023-01-23 17:43:06.2641 Debug Logger FieryRestaurant.Repository.Logger.LoggerManager [Warn] => logfile
+2023-01-23 17:43:06.2641 Debug Logger FieryRestaurant.Repository.Logger.LoggerManager [Error] => logfile
+2023-01-23 17:43:06.2641 Debug Logger FieryRestaurant.Repository.Logger.LoggerManager [Fatal] => logfile
+2023-01-23 17:43:06.2904 Debug FileTarget(Name=logfile): Preparing for new file: 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\2023-01-23_logfile.txt'
+2023-01-23 17:43:06.2986 Debug FileTarget(Name=logfile): Creating file appender: 'C:\Users\Gokul\source\repos\FieryRestaurant\NLog\2023-01-23_logfile.txt'
+2023-01-23 17:43:06.2986 Trace FileTarget(Name=logfile): Opening C:\Users\Gokul\source\repos\FieryRestaurant\NLog\2023-01-23_logfile.txt with allowFileSharedWriting=False
