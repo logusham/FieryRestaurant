@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{C30BE5BD-790
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{B2B2B6A7-DF65-4334-AFA8-10E05F2CBBD2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{94335DBC-79FC-4BDC-AE76-69D4693921DD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fiery.ServiceLayer", "Fiery.ServiceLayer", "{94335DBC-79FC-4BDC-AE76-69D4693921DD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{883C7EB8-3360-4C8F-9A52-62D2F85FA60F}"
 EndProject
@@ -15,15 +15,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exception", "Exception", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{2AD4EBD6-1089-4A8F-A6CB-30462F767D80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieryRestaurant.API", "FieryRestaurant.API\FieryRestaurant.API.csproj", "{EAFF18D0-02C3-4FB6-8F7D-EDD89A988189}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FieryRestaurant.API", "FieryRestaurant.API\FieryRestaurant.API.csproj", "{EAFF18D0-02C3-4FB6-8F7D-EDD89A988189}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieryRestaurant.Repository", "FieryRestaurant.Repository\FieryRestaurant.Repository.csproj", "{2B6A9CD0-A545-4773-AE30-29AE1F0D886F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FieryRestaurant.Repository", "FieryRestaurant.Repository\FieryRestaurant.Repository.csproj", "{2B6A9CD0-A545-4773-AE30-29AE1F0D886F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieryRestaurant.DTO", "FieryRestaurant.DTO\FieryRestaurant.DTO.csproj", "{50424E90-403F-43B3-801D-985167C5D7EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FieryRestaurant.DTO", "FieryRestaurant.DTO\FieryRestaurant.DTO.csproj", "{50424E90-403F-43B3-801D-985167C5D7EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieryRestaurant.Entities", "FieryRestaurant.Entities\FieryRestaurant.Entities.csproj", "{89E57321-E328-42AE-B8E7-2793C6B6DF40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FieryRestaurant.Entities", "FieryRestaurant.Entities\FieryRestaurant.Entities.csproj", "{89E57321-E328-42AE-B8E7-2793C6B6DF40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieryRestaurant.Business", "FieryRestaurant.Service\FieryRestaurant.Business.csproj", "{14B0BF6A-0248-4863-96EB-2339FC24DD38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FieryRestaurant.Service", "FieryRestaurant.Service\FieryRestaurant.Service.csproj", "{14B0BF6A-0248-4863-96EB-2339FC24DD38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieryUnitTest", "FieryUnitTest\FieryUnitTest.csproj", "{38165427-6924-4CB0-BD31-AAF0CCF6D5F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{14B0BF6A-0248-4863-96EB-2339FC24DD38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14B0BF6A-0248-4863-96EB-2339FC24DD38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14B0BF6A-0248-4863-96EB-2339FC24DD38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38165427-6924-4CB0-BD31-AAF0CCF6D5F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38165427-6924-4CB0-BD31-AAF0CCF6D5F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38165427-6924-4CB0-BD31-AAF0CCF6D5F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38165427-6924-4CB0-BD31-AAF0CCF6D5F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +67,7 @@ Global
 		{50424E90-403F-43B3-801D-985167C5D7EF} = {883C7EB8-3360-4C8F-9A52-62D2F85FA60F}
 		{89E57321-E328-42AE-B8E7-2793C6B6DF40} = {883C7EB8-3360-4C8F-9A52-62D2F85FA60F}
 		{14B0BF6A-0248-4863-96EB-2339FC24DD38} = {94335DBC-79FC-4BDC-AE76-69D4693921DD}
+		{38165427-6924-4CB0-BD31-AAF0CCF6D5F6} = {2AD4EBD6-1089-4A8F-A6CB-30462F767D80}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4577F1D-5383-4683-BAC5-9A7B937B751D}

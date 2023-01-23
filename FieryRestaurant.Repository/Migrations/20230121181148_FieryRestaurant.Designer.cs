@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FieryRestaurant.Repository.Migrations
 {
     [DbContext(typeof(FieryDbContext))]
-    [Migration("20230119070324_FieryRestaurant")]
+    [Migration("20230121181148_FieryRestaurant")]
     partial class FieryRestaurant
     {
         /// <inheritdoc />
@@ -106,8 +106,9 @@ namespace FieryRestaurant.Repository.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("LastModifiedBy")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("LastModifiedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("LastModifiedDate")
                         .HasColumnType("datetime2");

@@ -17,8 +17,7 @@ namespace FieryRestaurant.Entities
         public DateTime CreatedDate { get; set; }
         [DataType(DataType.Date)]
         public DateTime LastModifiedDate { get; set; }
-        [DataType(DataType.Time)]
-        public DateTime LastModifiedBy { get; set; }
+        public string LastModifiedBy { get; set; }
         public bool IsActive { get; set; }
         [Required]
         [ForeignKey("Business")]

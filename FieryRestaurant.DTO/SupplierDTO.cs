@@ -12,9 +12,11 @@ namespace FieryRestaurant.DTO
     {
         public Guid SupplierID { get; set; }
         public string SupplierName { get; set; }
+        [DataType(DataType.Date)]
         public DateTime CreatedDate { get; set; }
+        [DataType(DataType.Date)]
         public DateTime LastModifiedDate { get; set; }
-        public DateTime LastModifiedBy { get; set; }
+        public string LastModifiedBy { get; set; }
         public bool IsActive { get; set; }
         public BusinessDTO Business { get; set; }
 

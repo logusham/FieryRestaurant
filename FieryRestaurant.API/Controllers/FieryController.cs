@@ -1,8 +1,12 @@
 ﻿using FieryRestaurant.DTO;
+using FieryRestaurant.Entities;
 using FieryRestaurant.Service.Service.Interface;
 using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
+using NLog;
+using System.Diagnostics;
 
 namespace FieryRestaurant.API.Controllers
 {
@@ -11,100 +15,69 @@ namespace FieryRestaurant.API.Controllers
     [Route("api/[controller]")]
     public class FieryController : ControllerBase
     {
-        public IFieryService service;
+        private readonly IFieryService service;
+        private readonly NLog.ILogger logger = LogManager.GetCurrentClassLogger();
+
         public FieryController(IFieryService service)
         {
             this.service = service;
         }
         [HttpGet]
-        [Route("{id:guid}")]
         [EnableQuery]
-      public IActionResult GetSupplier(Guid id)
+        public IActionResult Get()
         {
             try
             {
-                var supplier = service.GetSupplier(id);
-                if (supplier == null)
+                var stopwatch = new Stopwatch();
+                stopwatch.Start();
+                List<SupplierDTO> supplierDTOs = service.GetSuppliers();
+                if (supplierDTOs == null)
                 {
                     return NotFound();
                 }
-                return Ok(supplier);
-            }catch(Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-        [HttpPost]
-        public IActionResult AddSupplier(SupplierDTO supplier)
-        {
-            try
-            {
-                bool result = service.AddSupplier(supplier);
-                if (result)
-                {
-                    return Ok(result);
-                }
-                return Ok(result);
+                stopwatch.Stop();
+                var OutputTime=stopwatch.Elapsed;
+                return Ok(supplierDTOs);
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
-            }
-        }
-        [HttpPut]
-        [Route("{id:guid}")]
-        [EnableQuery]
-       public IActionResult UpdateSupplier(Guid id,SupplierDTO Supplier)
-        {
-            try
-            {
-                var supplier = service.UpdateSupplier(id, Supplier);
-                if (supplier == null)
-                {
-                    return NotFound();
-                }
-                return Ok(supplier);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-        [HttpDelete]
-        [Route("{id:guid}")]
-        public IActionResult DeleteSupplier(Guid id)
-        {
-            try
-            {
-                bool result = service.DeleteSupplier(id);
-                if (result)
-                {
-                    return Ok(result);
-                }
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
+                logger.Error(ex.Message);
                 return BadRequest(ex.Message);
             }
         }
         [HttpGet]
+        [Route("{id:guid}")]
         [EnableQuery]
-        public IActionResult GetSuppliers()
+      public IActionResult Get([FromRoute] Guid id)
         {
             try
             {
-                var suppliers = service.GetSuppliers();
-                if (suppliers == null)
+                var supplierDTO = service.GetSupplier(id);
+                if (supplierDTO == null)
                 {
                     return NotFound();
                 }
-                return Ok(suppliers);
-            }
-            catch (Exception ex)
+                return Ok(supplierDTO);
+            }catch(Exception ex)
             {
+                logger.Error(ex.Message);
                 return BadRequest(ex.Message);
             }
         }
+        [HttpPost]
+        public IActionResult Post(SupplierDTO supplierDTO)
+        {
+            try
+            {
+                 SupplierDTO resultDTO = service.AddSupplier(supplierDTO);
+                return Ok(resultDTO);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex.Message);
+                return BadRequest(ex.Message);
+            }
+        }
+       
     }
 }

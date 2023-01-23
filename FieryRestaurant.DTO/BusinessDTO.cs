@@ -11,6 +11,7 @@ namespace FieryRestaurant.DTO
     {
         public string BusinessName { get; set; }
         public int LicenseNo { get; set; }
+        [DataType(DataType.Date)]
         public DateTime LicenseDate { get; set; }
     }
 }

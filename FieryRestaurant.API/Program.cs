@@ -1,5 +1,10 @@
 using FieryRestaurant.Business.Mapping;
+using FieryRestaurant.Business.Mapping.Implimentation;
+using FieryRestaurant.Business.Mapping.Interface;
 using FieryRestaurant.Repository.DataAccess;
+using FieryRestaurant.Repository.Repository.Implimentation;
+using FieryRestaurant.Repository.Repository.Interface;
+using FieryRestaurant.Service;
 using FieryRestaurant.Service.Service.Implimentation;
 using FieryRestaurant.Service.Service.Interface;
 using Microsoft.AspNet.OData.Extensions;
@@ -8,6 +13,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.Resource;
+using NLog;
 
 namespace FieryRestaurant.API
 {
@@ -16,6 +22,7 @@ namespace FieryRestaurant.API
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/NLog.config"));
 
             // Add services to the container.
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -26,9 +33,12 @@ namespace FieryRestaurant.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<FieryDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("FieryDbConnection")));
-            builder.Services.AddScoped<IFieryService, FieryService>();
             builder.Services.AddOData();
-            builder.Services.AddAutoMapper(typeof(MapperProfile).Assembly);
+            builder.Services.AddAutoMapper(typeof(FieryMapperProfile).Assembly);
+            builder.Services.AddScoped<IFieryService, FieryService>();
+            builder.Services.AddScoped<IFieryRepository, FieryRepository>();
+            builder.Services.AddScoped<IFieryMapping, FieryMapping>();
+            builder.Services.AddMemoryCache();
 
             var app = builder.Build();
 
